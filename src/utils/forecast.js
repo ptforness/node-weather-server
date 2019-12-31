@@ -1,5 +1,5 @@
 const request = require('request')
-const getWeatherIcon = require('../../src/utils/getWeatherIcon')
+const getWeatherIcon = require('./getWeatherIcon')
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()

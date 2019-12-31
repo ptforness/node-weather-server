@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
-const forecast = require('./utils/getForecastByCoords')
+const forecast = require('./utils/forecast')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -67,19 +67,6 @@ app.get('/weather', (req, res) => {
                 data: forecastData
             })
         })
-    })
-})
-
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: "You must provide a search term"
-        })
-    }
-    
-    console.log(req.query)
-    res.send({
-        products: []
     })
 })
 
