@@ -4,10 +4,10 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/getForecastByCoords')
 
-//console.log(__dirname) Current Directory
-//console.log(__filename) Current File
-
 const app = express()
+const port = process.env.PORT || 3000
+
+// Changes default path for static files
 const publicDirectory = path.join(__dirname, '../public')
 
 // Changes default path for views
@@ -97,6 +97,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('App is listening on port 3000')
+app.listen(port, () => {
+    console.log(`App is listening on port ${port}`)
 })
