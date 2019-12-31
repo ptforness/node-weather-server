@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', e => {
             } else {
                 address.textContent = data.location
                 summary.textContent = data.data.summary
-                currentTemp.textContent = `Current Temperature ${data.data.currentTemp}°F`
+                currentTemp.textContent = `Current Temperature: ${data.data.currentTemp}°F`
                 chanceOfRain.textContent = `Chance of Rain: ${data.data.chanceOfRain}%`
                 weatherIcon.src = data.data.icon
                 weatherIcon.style.display = 'block'
